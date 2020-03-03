@@ -2,11 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
     <title>Login</title>
   </head>
   <body>
-    <form class="" action="authent.php?page=identifier" method="post">
+    <form id="formulaire" action="authent.php?page=identifier" method="post">
 
       <div>
         <fieldset >
@@ -20,18 +19,31 @@
           <div>
             <input type="text" name="mdp">
           </div>
+          <br>
+
+          <input type="submit" name="valide" onclick="submitForm('valide')" value="Connect">
+          <input type="submit" name="inscription" onclick="submitForm('inscription')" value="inscription">
+
         </fieldset>
-        <div>
-          <div stlye="">
-            <div>
-              <input type="submit" name="valide" value="Connect">
-              <input type="reset"  name="annuler" value="annuler">
-              <input type="submit" name="inscription" value="inscription">
-            </div>
+
+        <?php
+
+        if(isset($MessageError)){
+          ?>
+          <div>
+            <?= $MessageError ?>
           </div>
-        </div>
+          <?php
+        } ?>
       </div>
 
     </form>
+    <script type="text/javascript">
+      function submitForm(action) {
+        var form = document.getElementById('formulaire');
+        form.action = "authent.php?page=identifier&btn=" + action;
+        form.submit();
+      }
+    </script>
   </body>
 </html>

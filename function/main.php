@@ -19,9 +19,19 @@ function getController($con){
 }
 
 function getModels($mdl){
-  include("./config/PDO.clas.php");
+  // include("./config/PDO.cls.php");
 
   include(MOD_DIR.$mdl.".model.php");
+}
+
+function getEnity($ent){
+  include(ENT_DIR.$ent.".cls.php");
+}
+
+
+function add_param(array &$table_param , $data){
+  $size = count($table_param);
+  $table_param['p'.($size+1)] = $data ;
 }
 
 
