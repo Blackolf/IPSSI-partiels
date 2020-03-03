@@ -28,7 +28,7 @@ class DataBase {
   }
 
   public function fetch(){
-
+    return DataBase::$monPdo->fetch(PDO::FETCH_ASSOC);
   }
 
   public function add_param(array &$table_param , $new_param){
