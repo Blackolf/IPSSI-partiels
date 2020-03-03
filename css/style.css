@@ -1,0 +1,139 @@
+body {
+ font-family:"trebuchet ms",sans-serif;
+ background:#F2F1ED;
+ }
+ h3
+ {
+ text-align : center ;
+ color:#DF3F3F;
+ font-weight:bold
+ }
+
+ p
+ {
+ color:#DF3F3F;
+ font-weight:bold
+ }
+form {
+ background-color:#FAFAFA;
+ width:550px;
+  margin:auto;
+  margin-top:30px;
+  background:#FFF;
+  height: auto;
+  padding:20px 50px 20px;
+  border: solid 1px #9A9591;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+
+ }
+fieldset {
+ padding:10px 20px 20px 20px;
+ margin-bottom:10px;
+ -webkit-box-shadow:5px 5px 5px  #9A9591 ;
+         box-shadow:5px 5px 5px  #9A9591 ;
+ border:1px solid #DF3F3F;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+
+ }
+legend {
+ color:#DF3F3F;
+ font-weight:bold
+ }
+label {
+ margin-top:10px;
+ display:block;
+ font-style:oblique;
+ }
+label.inline {
+ display:inline;
+ margin-right:40px;
+ }
+input[type=text], input[type=password], input[type=email],textarea, select, option {
+ background-color:#FFF3F3;
+ width:250px;
+  height:20px;
+  line-height:20px;
+  font-weight:bold;
+  color:#9A9591;
+
+ }
+input[type=text],input[type=password], input[type=email], textarea, select {
+ padding:3px;
+ border:1px solid #F5C5C5;
+ border-radius:5px;
+ width:200px;
+ -webkit-box-shadow:1px 1px 2px #C0C0C0 inset;
+         box-shadow:1px 1px 2px #C0C0C0 inset;
+ }
+ input[type=text]:focus ,input[type=password]:focus, input[type=email]:focus, textarea:focus, select:focus
+ {
+  border:solid 1px red;
+}
+
+select {
+ margin-top:10px;
+ }
+input[type=radio], input[type=checkbox] {
+ background-color : none ;
+ border:none;
+ width:10px;
+ }
+
+
+#centre
+{
+text-align : center ;
+}
+input[type=submit], input[type=reset] {
+ width:200px;
+ margin-left:5px;
+ -webkit-box-shadow:1px 1px 1px #D83F3D;
+         box-shadow:1px 1px 1px #D83F3D;
+ cursor:pointer;
+ }
+
+#bulle {
+text-align: center ;
+color: white ;
+position : relative ;
+display :inline-block;
+margin-left:40px;
+background: #DF3F3F; /** couleur du fond (se retrouve 2 fois) **/
+border: 5px solid #FFF3F3; /** taille de la bordure et couleur (se retrouve 2 fois) **/
+width:200px; height:20px;} /** dimensions de la cellule (du cadre) **/
+#bulle:after, #bulle:before {
+right: 100%; /** right pour mettre la flèche à gauche ! **/
+border: solid transparent;
+content: "";
+position: absolute;
+}
+#bulle:after {
+border-right-color: #DF3F3F; /** 2e indication de couleur du fond **/
+border-width: 20px; /** grandeur de la flèche **/
+top: 50%; /** position de la flèche (se retrouve 2 fois) **/
+margin-top: -20px;
+} /** indication de la grandeur de la flèche (valeur négative) **/
+#bulle:before {
+border-right-color: #FFF3F3; /** 2e indication de la couleur de la bordure **/
+border-width: 30px; /** indication de la grandeur de la flèche +7px **/
+top: 50%; /** 2e indication de la position de la flèche **/
+margin-top: -30px; } /** indication de la grandeur de la flèche +7px (valeur négative) **/
+a.button{
+	background:url(button.gif);
+	display:block;
+	color:#555555;
+	font-size:11px;
+	font-weight:bold;
+	height:30px;
+	line-height:29px;
+	margin-bottom:14px;
+	text-decoration:none;
+	width:191px;
+}
+a:hover.button{
+	color:#0066CC;
+}
