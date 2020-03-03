@@ -22,21 +22,12 @@ class DataBase {
     return DataBase::$monDataBase;
   }
 
-  public function query_req($req,array $table_param){
-    DataBase::$monPdo->prepare($req);
-    DataBase::$monPdo->execute($table_param);
-  }
-
-  public function fetch(){
+  public function exec($req,array $table_param){
+    $res = DataBase::$monPdo->prepare($req);
+    $res->execute($table_param);
+    return $res->fetch(PDO::FETCH_ASSOC);
 
   }
-
-  public function add_param(array &$table_param , $new_param){
-    $size = count($table_param);
-    $table_param['$'.($size+1)] = $new_param ;
-  }
-
-
 
 
 }
